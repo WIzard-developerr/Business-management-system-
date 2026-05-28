@@ -1,0 +1,6 @@
+{
+  "name": "Business Management System",
+  "description": "An all-in-one ERP/CRM platform for managing sales, customers, inventory, finance, HR, projects, and reporting.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

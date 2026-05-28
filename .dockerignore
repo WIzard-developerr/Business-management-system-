@@ -1,0 +1,10 @@
+# Docker Build Ignored Directories
+node_modules
+npm-debug.log
+dist
+.env
+.git
+.github
+*.md
+.sqlite
+db-data.json
