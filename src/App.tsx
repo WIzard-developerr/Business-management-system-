@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { 
   Building2, LayoutDashboard, Users, FileSpreadsheet, Package, 
   TrendingUp, Contact, FolderGit2, History, Settings, LogOut, 
-  Search, Bell, Sparkles, Sliders, Menu, X 
+  Search, Bell, Sparkles, Sliders, Menu, X, Cloud
 } from 'lucide-react';
 
 // Modular Component imports
@@ -16,6 +16,7 @@ import { HrTab } from './components/HrTab.js';
 import { ProjectsTab } from './components/ProjectsTab.js';
 import { SettingsTab } from './components/SettingsTab.js';
 import { AuditTab } from './components/AuditTab.js';
+import { WorkspaceTab } from './components/WorkspaceTab.js';
 
 interface User {
   id: string;
@@ -151,6 +152,7 @@ export default function App() {
     { id: 'finance', label: 'Finance & Ledger', icon: TrendingUp, roles: ['Admin', 'Accountant', 'Super_Admin'] },
     { id: 'hr', label: 'Human Resources', icon: Contact, roles: ['Admin', 'Manager', 'Accountant', 'Super_Admin'] },
     { id: 'projects', label: 'Projects & Tasks', icon: FolderGit2 },
+    { id: 'workspace', label: 'Google Workspace', icon: Cloud },
     { id: 'audit', label: 'Audit Trail', icon: History, roles: ['Admin', 'Super_Admin'] },
     { id: 'settings', label: 'Administration', icon: Settings, roles: ['Admin', 'Super_Admin'] }
   ];
@@ -407,6 +409,9 @@ export default function App() {
             )}
             {activeTab === 'projects' && (
               <ProjectsTab token={token} />
+            )}
+            {activeTab === 'workspace' && (
+              <WorkspaceTab />
             )}
             {activeTab === 'audit' && (
               <AuditTab token={token} />
